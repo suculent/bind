@@ -1,5 +1,11 @@
 version: '2'
 
+#networks:
+#  frontend:
+#    ipam:
+#      config:
+#        - subnet: 172.30.0.0/24
+
 services:
   bind:
     restart: always
@@ -12,3 +18,6 @@ services:
     - ./data:/data
     environment:
     - ROOT_PASSWORD=secretpassword
+#    networks:
+#        frontend:
+#            ipv4_address: 172.30.0.112
