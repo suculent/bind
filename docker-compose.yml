@@ -16,8 +16,8 @@ services:
     - "10000:10000/tcp"
     volumes:
     - ./data:/data
-    environment:
-    - ROOT_PASSWORD=secretpassword
+    env_file:
+    - .env
 #    networks:
 #        frontend:
 #            ipv4_address: 172.30.0.112
